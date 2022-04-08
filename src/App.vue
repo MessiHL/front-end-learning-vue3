@@ -1,9 +1,47 @@
-<script setup lang="ts">
+<script lang="ts">
+import TreeItem from './examples/TreeView/TreeItem.vue'
+import { defineComponent, ref} from 'vue'
+export default defineComponent({
+  name: 'App',
+  components:{
+    TreeItem
+  },
+  setup(props) {
+    const treeData = ref({
+    name: 'My Tree',
+    children: [
+      { name: 'hello' },
+      { name: 'wat' },
+      {
+        name: 'child folder',
+        children: [
+          {
+            name: 'child folder',
+            children: [{ name: 'hello' }, { name: 'wat' }]
+          },
+          { name: 'hello' },
+          { name: 'wat' },
+          {
+            name: 'child folder',
+            children: [{ name: 'hello' }, { name: 'wat' }]
+          }
+        ]
+      }
+    ]
+  })
+    
+    return {
+      treeData
+    }
+  }
+})
 
 </script>
 
 <template>
-  <h2>vue3</h2>
+   <ul>
+     <TreeItem class="item" :model="treeData">{{treeData.name}}</TreeItem>
+   </ul>
 </template>
 
 <style>
