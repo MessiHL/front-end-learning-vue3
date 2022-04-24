@@ -1,13 +1,10 @@
 <template>
- <!-- 
-  参考   
- -->
-  <h2>watch-ref</h2>
-  
-
+ <Main>vue3-learning</Main>
 </template>
 
 <script setup lang="ts">
+import Main from './components/layout/Main.vue'
+
 
 </script>
 <style>

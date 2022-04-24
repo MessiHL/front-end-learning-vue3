@@ -1,0 +1,52 @@
+html,
+body{
+  padding: 0;
+  margin: 0;
+}
+
+// 以下高度必须设置为 100%,否则flex 高度配置不会有效果
+html,
+body,
+.layout,
+#app{
+  height: 100%;
+}
+
+/**/
+.layout{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  .layout-header {
+    flex: 0 0 auto;
+    height: 48px;
+    line-height: 48px;
+    background-color: #071D70;
+  }
+  .layout-body{
+    flex:1 1 auto;//自动伸缩填满剩余空间
+    display: flex;
+    overflow: hidden;
+    .layout-aside {
+      width: 200px;
+      background-color: #4867D6;
+      overflow-y: auto;
+    }
+    .layout-content{
+      flex: 1 1 auto; //自动伸缩填满剩余空间
+      color: #282828;
+      overflow: hidden;
+      
+      background-color: #f8f8f8;
+    }
+  }
+  .layout-footer {
+    flex: 0 0 auto;
+    height: 32px;
+    line-height: 42px;
+    background-color: #071D70;
+  }
+
+  
+
+}
