@@ -24,10 +24,13 @@ import Header from './Header.vue'
 import Menu from './Menu.vue'
 import Body from './Body.vue'
 import Footer from './Footer.vue'
+
 import './../../styles/layout/index.scss'
 
 
 </script>
-<style>
+<style lang="scss" scoped>
+
+
 
 </style>

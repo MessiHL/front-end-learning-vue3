@@ -2,11 +2,13 @@ html,
 body{
   padding: 0;
   margin: 0;
+  box-sizing: border-box; /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing*/
 }
 
 // 以下高度必须设置为 100%,否则flex 高度配置不会有效果
 html,
 body,
+div
 .layout,
 #app{
   height: 100%;
@@ -21,6 +23,7 @@ body,
     flex: 0 0 auto;
     height: 48px;
     line-height: 48px;
+    padding: 0 12px;
     background-color: #071D70;
   }
   .layout-body{
@@ -36,14 +39,30 @@ body,
       flex: 1 1 auto; //自动伸缩填满剩余空间
       color: #282828;
       overflow: hidden;
-      
+      padding: 6px;
       background-color: #f8f8f8;
     }
+
+     /* 滚动槽 */
+     .layout-aside::-webkit-scrollbar {
+      width: 8px;
+    }
+    .layout-aside::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background: #4867D6;
+    }
+    /* 滚动条滑块 */
+    .layout-aside::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background: #071D70;
+    }
+    
   }
   .layout-footer {
     flex: 0 0 auto;
     height: 32px;
-    line-height: 42px;
+    line-height: 32px;
+    padding: 0 12px;
     background-color: #071D70;
   }
 
