@@ -2,7 +2,7 @@
 <div class="nav nav-scrollbar">
   <ul id="nav" class="nav nav-scrollbar">
     <li class="item1"><a href="">Item</a></li>
-    <li class="item2"><a href="">Item</a></li>
+    <!-- <li class="item2"><a href="">Item</a></li>
     <li class="item3"><a href="">Item</a></li>
     <li class="item4"><a href="">Item</a></li>
     <li class="item5"><a href="">Item</a></li>
@@ -60,7 +60,7 @@
     <li class="item27"><a href="">Item</a></li>
     <li class="item28"><a href="">Item</a></li>
     <li class="item29"><a href="">Item</a></li>
-    <li class="item30"><a href="">Item</a></li>
+    <li class="item30"><a href="">Item</a></li> -->
   </ul>
 </div>
 </template>
