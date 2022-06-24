@@ -1,11 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import Card from './components/common/Card.vue'
+import Auth from './directives/auth'
 
 const app =  createApp(App)
 
-// 全局 property
-app.config.globalProperties.foo = 'test'
+// // 全局 property
+// app.config.globalProperties.foo = 'test'
+// //  全局组件
+// app.component('Card',Card)
 
-app.component('Card',Card)
-.mount('#app')
+
+app.use(Auth).mount('#app')
